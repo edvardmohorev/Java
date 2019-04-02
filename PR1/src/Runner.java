@@ -3,6 +3,7 @@ import by.gsu.pmspr.*;
 public class Runner {
 
     public static void main(String[] args) {
+        int maxTotalExpenses=0;
         BusinessTrip[] businessTrips = {
                 new BusinessTrip("Anton", 500, 31),
                 null,
@@ -34,12 +35,23 @@ public class Runner {
 
         }
         System.out.println("Sum of the total expenses = "+ Byn.toBYN(sum));
-        BusinessTrip max = businessTrips[0];
-        for (BusinessTrip item: businessTrips){
-            if (item != null && item.getTotal() > max.getTotal()){
-                max = item;
+        for (BusinessTrip businessTrip : businessTrips) {
+            if (businessTrip != null) {
+                if (businessTrip.getTotal() > maxTotalExpenses) {
+                    maxTotalExpenses = businessTrip.getTotal();
+                }
             }
         }
-        System.out.println("Account with the max total = "+max.getAccount());
+
+        for (BusinessTrip businessTrip : businessTrips) {
+            if (businessTrip != null) {
+                if (businessTrip.getTotal() > maxTotalExpenses) {
+                    maxTotalExpenses = businessTrip.getTotal();
+                }
+                if (businessTrip.getTotal() == maxTotalExpenses) {
+                    System.out.println("Accoutnt with max total: "+businessTrip.getAccount());
+                }
+            }
+        }
     }
 }
