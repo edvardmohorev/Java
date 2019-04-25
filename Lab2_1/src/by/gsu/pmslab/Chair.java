@@ -7,6 +7,9 @@ public class Chair extends Furniture{
         super(manufacture, price, material);
         this.adjusting_the_pos_of_the_back=adjusting_the_pos_of_the_back;
     }
+    public Chair(String manufacture, int price, String material) {
+        super();
+    }
     public boolean isAdjusting_the_pos_of_the_back() {
         return adjusting_the_pos_of_the_back;
     }

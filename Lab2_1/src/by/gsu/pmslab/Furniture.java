@@ -10,6 +10,12 @@ public class Furniture {
         this.price=price;
         this.material=material;
     }
+    public Furniture(){
+        super();
+        this.manufacture=manufacture;
+        this.price=0;
+        this.material=material;
+    }
 
     public String getManufacture() {
         return manufacture;

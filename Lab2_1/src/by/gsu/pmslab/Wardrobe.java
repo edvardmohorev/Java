@@ -12,6 +12,12 @@ public class Wardrobe extends Furniture{
         this.depth=depth;
         this.height=height;
     }
+    public Wardrobe(String manufacture, int price, String material) {
+        super(manufacture, price, material);
+        this.width=0;
+        this.depth=0;
+        this.height=0;
+    }
     public double getWidth() {
         return width;
     }

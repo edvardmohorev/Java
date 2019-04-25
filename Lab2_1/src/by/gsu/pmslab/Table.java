@@ -9,6 +9,11 @@ public class Table extends Furniture {
         this.number_of_boxes=number_of_boxes;
         this.working_surface_area=working_surface_area;
     }
+    public Table(String manufacture, int price, String material) {
+        super(manufacture, price, material);
+        this.number_of_boxes=0;
+        this.working_surface_area=0;
+    }
     public int getNumber_of_boxes() {
         return number_of_boxes;
     }
