@@ -1,19 +1,14 @@
 package by.gsu.pmslab;
 import by.gsu.pmslab.Furniture;
-public class Chair implements Furniture,WriteInfo{
-    private String manufacture;
+public class Chair extends Furniture{
     private boolean adjusting_the_pos_of_the_back;
 
-    public Chair(String manufacture,boolean adjusting_the_pos_of_the_back) {
-        this.manufacture=manufacture;
+    public Chair(String manufacture, int price, String material,boolean adjusting_the_pos_of_the_back) {
+        super(manufacture, price, material);
         this.adjusting_the_pos_of_the_back=adjusting_the_pos_of_the_back;
     }
-
-    public String getManufacture() {
-        return manufacture;
-    }
-    public void setManufacture(String manufacture) {
-        this.manufacture = manufacture;
+    public Chair(String manufacture, int price, String material) {
+        super();
     }
     public boolean isAdjusting_the_pos_of_the_back() {
         return adjusting_the_pos_of_the_back;
@@ -21,19 +16,7 @@ public class Chair implements Furniture,WriteInfo{
     public void setAdjusting_the_pos_of_the_back(boolean adjusting_the_pos_of_the_back) {
         this.adjusting_the_pos_of_the_back = adjusting_the_pos_of_the_back;
     }
-    public String Write(){
-        return toString()+Country();
-    }
-
     public String toString(){
-        return "Chair: \n"+"Manufacture: "+manufacture+"; "+" Adjusting the pos of the back: "+adjusting_the_pos_of_the_back;
-    }
-
-    @Override
-    public String Country() {
-        if(getManufacture().equals("Пинскдрев")||getManufacture().equals("Калинковичи мебель")){
-            return "\nЭто булорусский производитель";
-        }
-        else return "\nЭто не булорусский производитель";
+        return "Chair: \n"+super.field()+";"+" Adjusting the pos of the back: "+adjusting_the_pos_of_the_back;
     }
 }

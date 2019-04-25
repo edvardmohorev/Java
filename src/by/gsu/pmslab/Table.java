@@ -1,28 +1,19 @@
 package by.gsu.pmslab;
 import by.gsu.pmslab.Furniture;
-public class Table implements Furniture,WriteInfo {
-    private String manufacture;
+public class Table extends Furniture {
     private int number_of_boxes;
     private double working_surface_area;
 
-    public Table(int number_of_boxes,double working_surface_area,String manufacture) {
+    public Table(String manufacture, int price, String material,int number_of_boxes,double working_surface_area) {
+        super(manufacture, price, material);
         this.number_of_boxes=number_of_boxes;
         this.working_surface_area=working_surface_area;
-        this.manufacture=manufacture;
     }
-    public Table() {
+    public Table(String manufacture, int price, String material) {
+        super(manufacture, price, material);
         this.number_of_boxes=0;
         this.working_surface_area=0;
     }
-
-    public String getManufacture() {
-        return manufacture;
-    }
-
-    public void setManufacture(String manufacture) {
-        this.manufacture = manufacture;
-    }
-
     public int getNumber_of_boxes() {
         return number_of_boxes;
     }
@@ -35,16 +26,7 @@ public class Table implements Furniture,WriteInfo {
     public void setWorking_surface_area(double working_surface_area) {
         this.working_surface_area = working_surface_area;
     }
-    public String Write(){
-        return toString()+Country();
-    }
     public String toString(){
-        return "Table: \n"+"Manufacture: "+manufacture+"; "+"Number of boxes: "+number_of_boxes+";"+" Working surface area: "+working_surface_area ;
-    }
-    public String Country() {
-        if(getManufacture().equals("Пинскдрев")||getManufacture().equals("Калинковичи мебель")){
-            return "\nЭто булорусский производитель";
-        }
-        else return "\nЭто не булорусский производитель";
+        return "Table: \n"+super.field()+";"+" Number of boxes: "+number_of_boxes+";"+" Working surface area: "+working_surface_area;
     }
 }

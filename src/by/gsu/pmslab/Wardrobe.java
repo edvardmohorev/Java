@@ -1,19 +1,19 @@
 package by.gsu.pmslab;
 import by.gsu.pmslab.Furniture;
 
-public class Wardrobe implements Furniture,WriteInfo{
-    private String manufacture;
+public class Wardrobe extends Furniture{
     private double width;
     private double depth;
     private double height;
 
-    public Wardrobe(String manufacture,double width,double depth, double height) {
+    public Wardrobe(String manufacture, int price, String material,double width,double depth, double height) {
+        super(manufacture, price, material);
         this.width=width;
         this.depth=depth;
         this.height=height;
-        this.manufacture=manufacture;
     }
-    public Wardrobe() {
+    public Wardrobe(String manufacture, int price, String material) {
+        super(manufacture, price, material);
         this.width=0;
         this.depth=0;
         this.height=0;
@@ -36,22 +36,7 @@ public class Wardrobe implements Furniture,WriteInfo{
     public void setHeight(double height) {
         this.height = height;
     }
-    public String getManufacture() {
-        return manufacture;
-    }
-    public void setManufacture(String manufacture) {
-        this.manufacture = manufacture;
-    }
-    public String Write(){
-        return toString()+Country();
-    }
     public String toString(){
-        return "Wardrobe: \n"+"Manufacture: "+manufacture+"; "+"Width: "+width+";"+" Height: "+height+";"+" Depth: "+depth;
-    }
-    public String Country() {
-        if(getManufacture().equals("Пинскдрев")||getManufacture().equals("Калинковичи мебель")){
-            return "\nЭто булорусский производитель";
-        }
-        else return "\nЭто не булорусский производитель";
+        return "Wardrobe: \n"+super.field()+";"+" Width: "+width+";"+" Height: "+height+";"+" Depth: "+depth;
     }
 }
