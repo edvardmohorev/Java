@@ -61,11 +61,11 @@ public class Operation {
     }
 
     private void getNum(String a, String b) {
-        if (values.getValue().get(a) != null && values.getValue().get(a) != null) {
+        if (values.getValue().get(a) != null && values.getValue().get(b) != null) {
             x = values.getValue().get(a);
             y = values.getValue().get(b);
             isRime=true;
-        } else if (values.getValue().get(a) == null && values.getValue().get(a) == null) {
+        } else if (values.getValue().get(a) == null && values.getValue().get(b) == null) {
             x = Integer.parseInt(a);
             y = Integer.parseInt(b);
         }
@@ -73,7 +73,7 @@ public class Operation {
 
     private void check() {
         if (x < 1 || x > 10 || y < 1 || y > 10) {
-            throw new NumberFormatException("Неверно ведены числа");
+            throw new NumberFormatException("Неверно введены числа");
         }
     }
 
