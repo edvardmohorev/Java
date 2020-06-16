@@ -1,0 +1,4 @@
+#Thu Dec 12 12:38:49 MSK 2019
+base.0=C\:\\Users\\JIuck\\Downloads\\android-room-example-master\\android-room-example-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
