@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <style name="MyActionBar">-->
+<!--        <item name="android:background">@color/back</item>-->
+<!--        <item name="android:titleTextColor"></item>-->
+<!--&lt;!&ndash;        <item name="android:actionBarStyle">@style/MyAction</item>&ndash;&gt;-->
+<!--    </style>-->
+<!--    <style name="AppThemes">-->
+<!--        <item name="android:actionBarStyle">@style/MyActionBar</item>-->
+<!--&lt;!&ndash;        <item name="action"&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="android:background">#000000</item>&ndash;&gt;-->
+<!--    </style>-->
+</resources>

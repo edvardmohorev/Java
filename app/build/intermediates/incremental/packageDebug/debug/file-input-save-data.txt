@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Tue Dec 10 21:59:36 MSK 2019
-0.baseType=DIRECTORY
-0.base=C\:\\Users\\JIuck\\Downloads\\android-room-example-master\\android-room-example-master\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-0.path=classes.dex
-0.set=DEX
-count=1
